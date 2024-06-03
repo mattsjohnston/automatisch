@@ -4,7 +4,8 @@ services:
     env: docker
     dockerfilePath: ./docker/Dockerfile
     dockerContext: .
-    repo: https://github.com/automatisch/automatisch
+    repo: https://github.com/mattsjohnston/automatisch
+    plan: free  # Specify the free plan
     autoDeploy: false
     envVars:
       - key: HOST
@@ -93,9 +94,11 @@ services:
     name: automatisch-redis
     ipAllowList: [] # allow only internal connections
     maxmemoryPolicy: noeviction
+    plan: free  # Specify the free plan
 databases:
   - name: automatisch-database
     databaseName: automatisch
+    plan: free  # Specify the free plan
 envVarGroups:
   - name: common-env-vars
     envVars:
